@@ -21,7 +21,7 @@ body {
 }
 
 /* TOGGLE THEME */
-.theme-light {
+.themeLight {
     --bg: #9ba3aa;
     --bgColor: #d1d5de;
     --bgPainel: #104585;
@@ -32,7 +32,7 @@ body {
     --fontColor: #d2d2d2;
 }
 
-.theme-dark {
+.themeDark {
     --bg: rgb(40, 40, 55, 0.9);
     --bgColor: rgb(40, 40, 55);
     --bgPainel: rgb(30, 35, 45);
@@ -62,7 +62,8 @@ body {
     font-size: 19px;
 }
 
-.sliderInput[type=checkbox] {
+
+.sliderInput[type=checkbox]{
     height: 0;
     width: 0;
     visibility: hidden;
@@ -73,46 +74,35 @@ body {
     text-indent: -9999px;
     width: 40px;
     height: 20px;
-    background-color: #555;
+    background: grey;
     float: right;
     border-radius: 90px;
     position: relative;
 }
 
-.sliderLabel:hover {
-    background-color: #777;
-}
-
-/* SELECTION BALL */
-.sliderLabel::after {
+.sliderLabel::after{
     content: '';
     position: absolute;
-    background-color: #000;
     top: 2px;
-    left: 2px;
+    left: 3px;
     width: 16px;
     height: 16px;
+    background-color: white;
     border-radius: 90px;
     transition: 0.3s;
 }
 
-/* SELECTION BALL */
-
 .sliderInput:checked + .sliderLabel {
-    background-color: #333;
+    background-color: var(--color-headings);
 }
 
-.sliderInput:checked + .sliderLabel:hover {
-    background-color: #777;
+.sliderInput:checked + .sliderLabel::after {
+    left: calc(100% - 3px);
+    transform: translateX(-100%);
 }
 
-.slider:checked + .sliderLabel::after {
-    left: calc(100% - 5px);
-    transform: translatex(-100%);
-}
-
-.sliderLabel:active::after {
-    width: 35px;
+.sliderLabel:active:after {
+    width: 45px;
 }
 
 /* SWITCH TO CHANGE THE THEME */
@@ -129,12 +119,14 @@ body {
 .socialMedia {
     float: right;
 }
+
 /* SOCIAL MEDIA */
 
 /* RESGISTER LOGIN */
 .buttonRegisterLogin {
     float: left;
 }
+
 /* RESGISTER LOGIN */
 
 /* ABOVE MENU */

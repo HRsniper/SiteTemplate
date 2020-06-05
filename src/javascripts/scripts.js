@@ -187,7 +187,7 @@ function mostrarSubMenuSubOver() {
 }
 
 // INTERRUPTOR DE TEMAS
-//função para definir um determinado tema / esquema de cores
+// função para definir um determinado tema / esquema de cores
 function setTheme(themeName) {
     localStorage.setItem('theme', themeName);
     document.documentElement.className = themeName;
@@ -195,21 +195,21 @@ function setTheme(themeName) {
 
 // função para alternar entre tema claro e escuro
 function toggleTheme() {
-    if (localStorage.getItem('theme') === 'theme-dark') {
-        setTheme('theme-light');
+    if (localStorage.getItem('theme') === 'themeDark') {
+        setTheme('themeLight');
     } else {
-        setTheme('theme-dark');
+        setTheme('themeDark');
     }
 }
 
 // Função chamada imediatamente para definir o tema no carregamento inicial
 (function () {
-    if (localStorage.getItem('theme') === 'theme-dark') {
-        setTheme('theme-dark');
-        document.getElementById('sliderInput').checked = true;
+    if (localStorage.getItem('theme') === 'themeDark') {
+        setTheme('themeDark');
+        document.getElementById('slider').checked = true;
     } else {
-        setTheme('theme-light');
-        document.getElementById('sliderInput').checked = false;
+        setTheme('themeLight');
+        document.getElementById('slider').checked = false;
     }
 })();
 // INTERRUPTOR DE TEMAS
