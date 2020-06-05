@@ -206,10 +206,10 @@ function toggleTheme() {
 (function () {
     if (localStorage.getItem('theme') === 'theme-dark') {
         setTheme('theme-dark');
-        document.getElementById('slider').checked = true;
+        document.getElementById('sliderInput').checked = true;
     } else {
         setTheme('theme-light');
-        document.getElementById('slider').checked = false;
+        document.getElementById('sliderInput').checked = false;
     }
 })();
 // INTERRUPTOR DE TEMAS

@@ -59,7 +59,7 @@ body {
 
 .slider {
     padding: 5px 10px;
-    font-size: 20px;
+    font-size: 19px;
 }
 
 .sliderInput[type=checkbox] {
@@ -86,10 +86,103 @@ body {
 /* SELECTION BALL */
 .sliderLabel::after {
     content: '';
+    position: absolute;
+    background-color: #000;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 90px;
+    transition: 0.3s;
 }
 
 /* SELECTION BALL */
 
+.sliderInput:checked + .sliderLabel {
+    background-color: #333;
+}
+
+.sliderInput:checked + .sliderLabel:hover {
+    background-color: #777;
+}
+
+.slider:checked + .sliderLabel::after {
+    left: calc(100% - 5px);
+    transform: translatex(-100%);
+}
+
+.sliderLabel:active::after {
+    width: 35px;
+}
+
 /* SWITCH TO CHANGE THE THEME */
+
+/* ABOVE MENU */
+.aboveMenu {
+    background-color: #555;
+    position: relative;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+}
+
+/* SOCIAL MEDIA */
+.socialMedia {
+    float: right;
+}
+/* SOCIAL MEDIA */
+
+/* RESGISTER LOGIN */
+.buttonRegisterLogin {
+    float: left;
+}
+/* RESGISTER LOGIN */
+
+/* ABOVE MENU */
+
+/* MENU */
+.menuContainer {
+    background-color: #888;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.menuContainer a {
+    margin-right: 1px;
+    margin-left: 1px;
+    text-decoration: none;
+    font-size: 18px;
+    border-top: 2px solid #888;
+    border-bottom: 2px solid #888;
+    color: aliceblue;
+}
+
+.menuContainer a:hover {
+    color: red;
+    background-color: aquamarine;
+    border-top: 2px solid aquamarine;
+    border-bottom: 2px solid aqua;
+}
+
+.subMenu {
+    position: absolute;
+    z-index: 1;
+    left: 352px;
+    top: 26px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.5);
+    /* display: none; */
+}
+
+.subMenu a {
+    display: block;
+    background-color: aquamarine;
+    color: aliceblue;
+}
+
+.showSubMenu {
+    display: block;
+}
+
+/* MENU */
 
 /* HEADER */
