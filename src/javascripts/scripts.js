@@ -187,7 +187,7 @@ function mostrarSubMenuSubOver() {
 }
 
 // INTERRUPTOR DE TEMAS
-// função para definir um determinado tema / esquema de cores
+//função para definir um determinado tema / esquema de cores
 function setTheme(themeName) {
     localStorage.setItem('theme', themeName);
     document.documentElement.className = themeName;
