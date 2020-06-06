@@ -59,103 +59,95 @@ function logar() {
 }
 
 // registro modal end
-
-// slider
-var valorDoSlide = 1;
+*/
+/* SLIDESHOW */
+var valueSlide = 1;
 
 // essa função inicializa a de slides e decide se deve avançar ou retroceder na sequência
-function proximoSlide(n) {
-    // showSlides(valorDoSlide += n);
+function prevNextSlide(n) {
 
-    clearInterval(tempo);
+    clearInterval(time);
     if (n < 0) {
-        showSlides(valorDoSlide -= 1);
+        showSlides(valueSlide -= 1);
     } else {
-        showSlides(valorDoSlide += 1);
+        showSlides(valueSlide += 1);
     }
     //se n for identico a -1
     if (n === -1) {
-        tempo = setInterval(() => {
-            proximoSlide(n + 2)
+        time = setInterval(function () {
+            prevNextSlide(n + 2)
         }, 4000);
-        // tempo = setInterval(function () {
-        //     proximoSlide(n + 2)
-        // }, 4000);
     } else {
-        // tempo = setInterval(() => {
-        //     proximoSlide(n + 1)
-        // }, 4000);
-        tempo = setInterval(function () {
-            proximoSlide(n + 1)
+        time = setInterval(function () {
+            prevNextSlide(n + 1)
         }, 4000);
     }
 }
-//  permitir ao usuário selecionar uma imagem específica na apresentação de slides
+
+
+// allow the user to select a specific slide with dots elements
 function currentSlide(n) {
-    // Isso limpará qualquer intervalo já existente, para não criar sobreposição entre o intervalo anterior e o novo.
-    clearInterval(tempo);
-    tempo = setInterval(function () {
-        proximoSlide(n + 1)
+
+    // This will clear any existing range, so as not to create overlap between the previous range and the new one
+    clearInterval(time);
+    time = setInterval(function () {
+        prevNextSlide(n + 1)
     }, 4000);
 
-    showSlides(valorDoSlide = n);
+    showSlides(valueSlide = n);
 }
 
-// A função reúne os elementos do slide e os pontos
+// main function that brings together slides elements and dots elements
 function showSlides(n) {
     var i;
-    const slides = document.getElementsByClassName("slideshow-slides");
-    const pontos = document.getElementsByClassName("slideshow-ponto");
+    const slides = document.getElementsByClassName("slideShowSlides");
+    const dots = document.getElementsByClassName("slideShowDots");
     if (n > slides.length) {
-        valorDoSlide = 1
+        valueSlide = 1
     }
     if (n < 1) {
-        valorDoSlide = slides.length;
+        valueSlide = slides.length;
     }
-
-    // valorDoSlide++;
 
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    for (i = 0; i < pontos.length; i++) {
-        pontos[i].className = pontos[i].className.replace(" slideshow-ativo", "");
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" slideShowActive", "");
     }
 
-    slides[valorDoSlide - 1].style.display = "block";
-    pontos[valorDoSlide - 1].className += " slideshow-ativo";
-    // setTimeout(showSlides, 4000);
+    slides[valueSlide - 1].style.display = "block";
+    dots[valueSlide - 1].className += " slideShowActive";
 }
-//movimento do slide. Inicializamos ambos, tempo e valordoslide.
-window.addEventListener("load", function () {
-    showSlides(valorDoSlide);
 
-    tempo = setInterval(function () {
-        proximoSlide(1)
+// automatic slide loading
+window.addEventListener("load", function () {
+    showSlides(valueSlide);
+
+    time = setInterval(function () {
+        prevNextSlide(1)
     }), 4000;
 })
 
-// funcionalidade Reproduzir / Pausar para quando um usuário passa o mouse sobre a apresentação de slides
-const slidecontainer = document.getElementsByClassName("slideshow-container")[0];
+// Play / Pause function for when a user hovers over the slide show
+const slidecontainer = document.getElementsByClassName("slideShowContainer")[0];
 
-slidecontainer.addEventListener("mouseover", pausa);
-slidecontainer.addEventListener("mouseout", retomar);
-// slidecontainer.addEventListener("mouseenter", pausa);
-// slidecontainer.addEventListener("mouseleave", retomar);
+slidecontainer.addEventListener("mouseover", pause);
+slidecontainer.addEventListener("mouseout", resume);
+// slidecontainer.addEventListener("mouseenter", pause);
+// slidecontainer.addEventListener("mouseleave", resume);
 
-function pausa() {
-    clearInterval(tempo);
+function pause() {
+    clearInterval(time);
 }
 
-function retomar() {
-    clearInterval(tempo);
-    tempo = setInterval(function () {
-        proximoSlide(1)
+function resume() {
+    clearInterval(time);
+    time = setInterval(function () {
+        prevNextSlide(1)
     }), 4000;
 }
-
-// slider end
- */
+/* SLIDESHOW */
 
 /* SUBMENU */
 function showSubMenu() {
@@ -183,8 +175,8 @@ function showSubMenu() {
 function mostrarSubMenuSubOver() {
     document.getElementsByClassName("sub-menu-sub", "sub-menu")[0]
         .classList.toggle("mostrarSub-menu");
-}
- */
+    }
+    */
 // INTERRUPTOR DE TEMAS
 // função para definir um determinado tema / esquema de cores
 function setTheme(themeName) {

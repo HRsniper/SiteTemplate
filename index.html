@@ -35,7 +35,7 @@
             <a href="http://">Home</a>
 
             <a class="buttonShowSubMenu" href="javascript:void(0)" onclick="showSubMenu()">Cursos</a>
-            <div class="subMenu">
+            <div class="subMenu fade">
                 <a href="http://">Curso 1</a>
                 <a href="http://">Curso 2</a>
                 <a href="http://">Curso 3</a>
@@ -51,48 +51,54 @@
     </header>
 
     <div class="slideShowContainer">
-        <div class="slideShowSlides">
+        <div class="slideShowSlides fade">
             <img src="src/images/img300x1000.png" alt="">
-            <span class="slideShowLegend">Texto</span>
+            <div class="slideShowLegend">Texto</div>
         </div>
 
-        <div class="slideShowSlides">
+        <div class="slideShowSlides fade">
             <img src="src/images/img300x1000.png" alt="">
-            <span class="slideShowLegend">Texto</span>
+            <div class="slideShowLegend">Texto</div>
         </div>
 
-        <div class="slideShowSlides">
+        <div class="slideShowSlides fade">
             <img src="src/images/img300x1000.png" alt="">
-            <span class="slideShowLegend">Texto</span>
+            <div class="slideShowLegend">Texto</div>
         </div>
 
-        <div class="slideShowSlides">
+        <div class="slideShowSlides fade">
             <img src="src/images/img300x1000.png" alt="">
-            <span class="slideShowLegend">Texto</span>
+            <div class="slideShowLegend">Texto</div>
         </div>
 
-        <div class="slideShowSlides">
+        <div class="slideShowSlides fade">
             <img src="src/images/img300x1000.png" alt="">
-            <span class="slideShowLegend">Texto</span>
+            <div class="slideShowLegend">Texto</div>
         </div>
 
-        <a href="javascript:void(0)" onclick="" title="Proximo">a</a>
-        <a href="javascript:void(0)" onclick="" title="Anterior">a</a>
+        <a class="slideShowPrev" href="javascript:void(0)" onclick="prevNextSlide(-1)" title="Anterior">&#10094;</a>
+        <a class="slideShowNext" href="javascript:void(0)" onclick="prevNextSlide(1)" title="Proximo">&#10095;</a>
     </div>
 
     <div class="slideShowDotsContainer">
-        <span class="slideShowDots" onclick="">d</span>
-        <span class="slideShowDots" onclick="">d</span>
-        <span class="slideShowDots" onclick="">d</span>
-        <span class="slideShowDots" onclick="">d</span>
-        <span class="slideShowDots" onclick="">d</span>
+        <span class="slideShowDots" onclick="currentSlide(1)"></span>
+        <span class="slideShowDots" onclick="currentSlide(2)"></span>
+        <span class="slideShowDots" onclick="currentSlide(3)"></span>
+        <span class="slideShowDots" onclick="currentSlide(4)"></span>
+        <span class="slideShowDots" onclick="currentSlide(5)"></span>
     </div>
 
-    <main>
-        <section>
+    <main class="mainContainer">
+        <aside class="asideLeft">
+        </aside>
+        <aside class="asideRight">
+        </aside>
+
+        <section class="sectionContainer">
             <article>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum officia exercitationem, saepe
+                    ARTIGO Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum officia exercitationem,
+                    saepe
                     dolores consectetur expedita eligendi architecto laudantium quia voluptate rerum unde ipsam fugit
                     maxime ratione, obcaecati veniam porro magni.
                 </p>
@@ -100,7 +106,8 @@
 
             <article>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum officia exercitationem, saepe
+                    ARTIGO Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum officia exercitationem,
+                    saepe
                     dolores consectetur expedita eligendi architecto laudantium quia voluptate rerum unde ipsam fugit
                     maxime ratione, obcaecati veniam porro magni.
                 </p>
@@ -108,9 +115,10 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="footerContainer">
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor omnis exercitationem, alias minima ipsam
+            FOOTER Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor omnis exercitationem, alias minima
+            ipsam
             esse, eveniet inventore dolorem hic magnam nesciunt voluptatem fugit rem! Esse perspiciatis quisquam facilis
             ducimus cumque.
         </p>

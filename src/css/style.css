@@ -147,6 +147,7 @@ body {
     border-top: 2px solid #888;
     border-bottom: 2px solid #888;
     color: aliceblue;
+    transition: 0.3s ease;
 }
 
 .menuContainer a:hover {
@@ -156,6 +157,7 @@ body {
     border-bottom: 2px solid aqua;
 }
 
+/* SUBMENU */
 .subMenu {
     position: absolute;
     z-index: 1;
@@ -175,11 +177,143 @@ body {
     display: block;
 }
 
+/* SUBMENU */
+
 /* MENU */
 
-/* BANNER */
-.
-
-/* BANNER */
-
 /* HEADER */
+
+/* BANNER */
+.slideShowContainer {
+    display: flex;
+    justify-content: center;
+    /* max-width: 1000px; */
+    position: relative;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 0;
+    background-color: rgb(33, 124, 124);
+    width: 100%;
+}
+
+.slideShowSlides {
+    display: none;
+}
+
+.slideShowSlides img {
+    width: 100%;
+}
+
+.slideShowPrev,
+.slideShowNext {
+    text-decoration: none;
+    cursor: pointer;
+    position: absolute;
+    /* top: 30px; */
+    top: 50%;
+    color: red;
+    font-size: 30px;
+    padding: 5px;
+    margin-top: -25px;
+}
+
+.slideShowPrev {
+    left: 0;
+    border-radius: 0 5px 5px 0;
+}
+
+.slideShowNext {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+
+.slideShowPrev:hover,
+.slideShowNext:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slideShowLegend {
+    color: red;
+    font-size: 20px;
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    text-align: center;
+    background-color: #888;
+}
+
+.slideShowDotsContainer {
+    /* background-color: #888; */
+}
+
+.slideShowDots {
+    background-color: #888;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 5px 1px;
+    transition: background 0.5s ease;
+}
+
+.slideShowDots:hover {
+    background-color: #999;
+}
+
+.slideShowActive {
+    background-color: #555;
+}
+
+/* BANNER */
+
+/* ANIMATION */
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ANIMATION */
+
+/* MAIN PAGE */
+.mainContainer {
+    display: flex;
+    flex: 1;
+    /* justify-content: center; */
+}
+
+.sectionContainer {
+    order: 2;
+    flex: 7;
+}
+
+.sectionContainer article {
+    margin-bottom: 10px;
+}
+
+.asideLeft {
+    order: 1;
+    flex: 1;
+}
+
+.asideRight {
+    order: 3;
+    flex: 1;
+}
+/* MAIN PAGE */
+
+/* FOOTER */
+.footerContainer{
+    margin: 20px 0;
+}
+/* FOOTER */
