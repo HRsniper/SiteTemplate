@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-* {
-    border: 1px solid #000;
-}
+/* * {border: 1px solid #000;} */
 
 html {
     font-family: 'Roboto', sans-serif;
@@ -140,14 +138,15 @@ body {
 }
 
 .menuContainer a {
-    margin-right: 1px;
-    margin-left: 1px;
+    margin-right: 2px;
+    margin-left: 2px;
     text-decoration: none;
     font-size: 18px;
     border-top: 2px solid #888;
     border-bottom: 2px solid #888;
     color: aliceblue;
     transition: 0.3s ease;
+    padding: 5px;
 }
 
 .menuContainer a:hover {
@@ -187,13 +186,11 @@ body {
 .slideShowContainer {
     display: flex;
     justify-content: center;
-    /* max-width: 1000px; */
     position: relative;
     margin: auto;
     margin-top: 5px;
     margin-bottom: 0;
     background-color: rgb(33, 124, 124);
-    width: 100%;
 }
 
 .slideShowSlides {
@@ -209,7 +206,6 @@ body {
     text-decoration: none;
     cursor: pointer;
     position: absolute;
-    /* top: 30px; */
     top: 50%;
     color: red;
     font-size: 30px;
@@ -239,14 +235,10 @@ body {
     width: 100%;
     bottom: 10px;
     text-align: center;
-    background-color: #888;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-/*
-.slideShowDotsContainer {
-    background-color: #888;
-}
-*/
+/* .slideShowDotsContainer {background-color: #888;} */
 
 .slideShowDots {
     background-color: #888;
@@ -318,6 +310,7 @@ body {
 /* FOOTER */
 .footerContainer {
     margin: 20px 0;
+    padding: 5px 10px;
 }
 
 /* FOOTER */
