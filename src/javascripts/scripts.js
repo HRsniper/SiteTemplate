@@ -1,3 +1,4 @@
+/*
 //registro modal
 function registro() {
     const open = document.getElementById('registrarSE');
@@ -55,8 +56,8 @@ function logar() {
             // registro.style.display = "none";
         }
     }
-    */
 }
+
 // registro modal end
 
 // slider
@@ -154,38 +155,36 @@ function retomar() {
 }
 
 // slider end
+ */
 
+/* SUBMENU */
+function showSubMenu() {
+    document.getElementsByClassName("subMenu")[0]
+        .classList.toggle("showSubMenu");
 
-
-
-
-// submenu
-function mostrarSubMenu() {
-    document.getElementsByClassName("sub-menu")[0]
-        .classList.toggle("mostrarSub-menu");
-
-    //esconder depois de clickar no sub menu
+    // hide after clicking on or outside the submenu
     window.onclick = function (event) {
-        if (!event.target.matches('.btncursos')) {
-            var dropDowns = document.getElementsByClassName("sub-menu");
+        if (!event.target.matches('.buttonShowSubMenu')) {
+            var dropDowns = document.getElementsByClassName("subMenu");
             var i;
 
             for (i = 0; i < dropDowns.length; i++) {
                 var abrirDrop = dropDowns[i];
-                if (abrirDrop.classList.contains("mostrarSub-menu")) {
-                    abrirDrop.classList.remove("mostrarSub-menu");
+                if (abrirDrop.classList.contains("showSubMenu")) {
+                    abrirDrop.classList.remove("showSubMenu");
                 }
             }
         }
     }
 }
-// submenu end
+/* SUBMENU */
 
+/* 
 function mostrarSubMenuSubOver() {
     document.getElementsByClassName("sub-menu-sub", "sub-menu")[0]
         .classList.toggle("mostrarSub-menu");
 }
-
+ */
 // INTERRUPTOR DE TEMAS
 // função para definir um determinado tema / esquema de cores
 function setTheme(themeName) {
