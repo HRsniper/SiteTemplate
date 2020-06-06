@@ -242,9 +242,11 @@ body {
     background-color: #888;
 }
 
+/*
 .slideShowDotsContainer {
-    /* background-color: #888; */
+    background-color: #888;
 }
+*/
 
 .slideShowDots {
     background-color: #888;
@@ -310,10 +312,12 @@ body {
     order: 3;
     flex: 1;
 }
+
 /* MAIN PAGE */
 
 /* FOOTER */
-.footerContainer{
+.footerContainer {
     margin: 20px 0;
 }
+
 /* FOOTER */
