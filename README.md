@@ -16,8 +16,6 @@ Site com login e registro modal,troca de tema com local storage que salva a esco
 
 Distribuído sob a licença MIT. Veja `LICENSE.MD` para mais informações.
 
-[https://github.com/HRsniper/SiteTemplate/](https://github.com/HRsniper/)
-
 ## Quer contribuir
 
 1. Caso queira faça o _fork_ do projeto
