@@ -24,22 +24,20 @@ body {
     --Background: #e6e6e6;
     --BackgroundSecondary: #c0c0c0;
     --BackgroundTertiary: #c0c0c0;
-    --bgPainelAcender: #0370a3;
-    --colorSecondary: rgb(30, 35, 45);
+    --BackgroundQuaternary: #c0c0c0; 
     --ColorHover: #ff9000;
-    --fontColorHover: rgb(245, 245, 245);
     --FontColor: #000;
+    --FontColorSecondary: #000;
 }
 
 .themeDark {
-    --Background: #555555;
+    --Background: #36363f;
     --BackgroundSecondary: #c0c0c0;
-    --BackgroundTertiary: #283035;
-    --bgPainelAcender: rgb(65, 75, 90);
-    --colorSecondary: rgb(145, 160, 215);
+    --BackgroundTertiary: #282835;
+    --BackgroundQuaternary: #282835; 
     --ColorHover: #99ddff;
-    --fontColorHover: rgb(155, 220, 255);
     --FontColor: #fff;
+    --FontColorSecondary: #000;
 }
 
 /* TOGGLE THEME */
@@ -85,7 +83,8 @@ body {
 
 .sliderLabel:hover {
     background-color: var(--Background);
-    border: 1px solid var(--ColorHover);;
+    border: 1px solid var(--ColorHover);
+    ;
 }
 
 .sliderLabel::after {
@@ -110,7 +109,8 @@ body {
 
 .sliderInput:checked+.sliderLabel:hover {
     background-color: var(--Background);
-    border: 1px solid var(--ColorHover);;
+    border: 1px solid var(--ColorHover);
+    ;
 }
 
 .sliderInput:checked+.sliderLabel::after {
@@ -134,6 +134,7 @@ body {
 }
 
 .aboveMenu a {
+    text-decoration: none;
     color: var(--FontColor);
     transition: background-color 0.5s ease;
     border-top: 2px solid var(--Background);
@@ -143,9 +144,9 @@ body {
 
 .aboveMenu a:hover {
     color: var(--ColorHover);
-    border-top: 2px solid var(--BackgroundTertiary);
-    border-bottom: 2px solid var(--BackgroundTertiary);
-    background-color: #e6e6e6;
+    border-top: 2px solid var(--ColorHover);
+    border-bottom: 2px solid var(--ColorHover);
+    background-color: var(--Background);
 }
 
 /* SOCIAL MEDIA */
@@ -168,7 +169,7 @@ body {
 
 /* MENU */
 .menuContainer {
-    background-color: #c0c0c0;
+    background-color: var(--BackgroundTertiary);
     display: flex;
     justify-content: center;
     position: relative;
@@ -180,18 +181,18 @@ body {
     margin-left: 2px;
     text-decoration: none;
     font-size: 18px;
-    border-top: 2px solid #e6e6e6;
-    border-bottom: 2px solid #e6e6e6;
-    color: #000;
-    transition: background-color 0.5s ease;
+    border-top: 2px solid var(--Background);
+    border-bottom: 2px solid var(--Background);
+    color: var(--FontColor);
     padding: 5px;
+    transition: background-color 0.5s ease;
 }
 
 .menuContainer a:hover {
-    color: #fff;
-    background-color: #e6e6e6;
-    border-top: 2px solid #c0c0c0;
-    border-bottom: 2px solid #c0c0c0;
+    color: var(--ColorHover);
+    background-color: var(--Background);
+    border-top: 2px solid var(--ColorHover);
+    border-bottom: 2px solid var(--ColorHover);
 }
 
 /* SUBMENU */
@@ -200,15 +201,22 @@ body {
     z-index: 1;
     left: 343px;
     top: 38px;
-    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.7);
     display: none;
 }
 
 .subMenu a {
     margin: 0;
     display: block;
-    background-color: #c0c0c0;
-    /* color: #000; */
+    background-color: var(--BackgroundTertiary);
+    border-top: 2px solid var(--BackgroundTertiary);
+    border-bottom: 2px solid var(--Background);
+}
+
+.subMenu a:hover {
+    border-top: 2px solid var(--ColorHover);
+    border-bottom: 2px solid var(--ColorHover);
+    
 }
 
 .showSubMenu {
@@ -243,7 +251,7 @@ body {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    color: #c0c0c0;
+    color: var(--FontColorSecondary);
     font-size: 30px;
     padding: 5px;
     margin-top: -25px;
@@ -262,12 +270,12 @@ body {
 
 .slideShowPrev:hover,
 .slideShowNext:hover {
-    color: #fff;
+    color: var(--ColorHover);
     background-color: rgba(0, 0, 0, 0.7);
 }
 
 .slideShowLegend {
-    color: #fff;
+    color: var(--ColorHover);
     font-size: 20px;
     position: absolute;
     width: 100%;
@@ -282,7 +290,7 @@ body {
 }
 
 .slideShowDots {
-    background-color: #c0c0c0;
+    background-color: var(--BackgroundSecondary);
     cursor: pointer;
     height: 20px;
     width: 20px;
@@ -293,7 +301,7 @@ body {
 }
 
 .slideShowDots:hover {
-    background-color: #fff;
+    background-color: var(--ColorHover);
 }
 
 .slideShowActive {
@@ -328,13 +336,15 @@ body {
 }
 
 .sectionContainer {
+    color: var(--FontColor);
     order: 2;
     flex: 7;
+    /* background-color: var(--BackgroundTertiary); */
 }
 
 .sectionContainer article {
     margin-bottom: 5px;
-    background-color: #c0c0c0;
+    background-color: var(--BackgroundQuaternary);
 }
 
 .asideLeft {
@@ -351,24 +361,29 @@ body {
 
 /* FOOTER */
 .footerContainer {
+    color: var(--FontColor);
     margin: 20px 0;
     /* margin-bottom: 10px; */
     padding: 5px 10px;
-    background-color: #c0c0c0;
+    background-color: var(--BackgroundQuaternary);
 }
 
 .socialMediaF {
-    float: right;
+    float: left;
 }
 
 .socialMediaF a {
-    color: #000;
+    color: var(--FontColor);
 }
 
 .socialMediaF a:hover {
-    color: #fff;
+    color: var(--ColorHover);
 }
 
+.copyright:hover {
+    cursor: copy;
+    color: var(--ColorHover);
+}
 /* FOOTER */
 
 
