@@ -24,17 +24,17 @@ body {
     --Background: #e6e6e6;
     --BackgroundSecondary: #c0c0c0;
     --BackgroundTertiary: #c0c0c0;
-    --BackgroundQuaternary: #c0c0c0; 
+    --BackgroundQuaternary: #c0c0c0;
     --ColorHover: #ff9000;
     --FontColor: #000;
     --FontColorSecondary: #000;
 }
 
 .themeDark {
-    --Background: #36363f;
+    --Background: #4b4b5e;
     --BackgroundSecondary: #c0c0c0;
     --BackgroundTertiary: #282835;
-    --BackgroundQuaternary: #282835; 
+    --BackgroundQuaternary: #282835;
     --ColorHover: #99ddff;
     --FontColor: #fff;
     --FontColorSecondary: #000;
@@ -216,7 +216,7 @@ body {
 .subMenu a:hover {
     border-top: 2px solid var(--ColorHover);
     border-bottom: 2px solid var(--ColorHover);
-    
+
 }
 
 .showSubMenu {
@@ -348,14 +348,53 @@ body {
 }
 
 .asideLeft {
+    color: var(--FontColor);
     order: 1;
     flex: 1;
+    text-align: left;
+    border-left: 5px solid var(--Background);
+}
+
+.asideLeft a {
+    display: block;
+    color: var(--FontColor);
+    text-decoration: none;
+    transition: border 0.5s ease;
+    border-top: 2px solid var(--BackgroundQuaternary);
+    border-bottom: 2px solid var(--BackgroundQuaternary);
+    padding-left: 5px;
+}
+
+.asideLeft a:hover {
+    background-color: var(--Background);
+    border-top: 2px solid var(--ColorHover);
+    border-bottom: 2px solid var(--ColorHover);
 }
 
 .asideRight {
+    color: var(--FontColor);
     order: 3;
     flex: 1;
+    text-align: left;
+    border-left: 5px solid var(--Background);
 }
+
+.asideRight a {
+    display: block;
+    color: var(--FontColor);
+    text-decoration: none;
+    transition: border 0.5s ease;
+    border-top: 2px solid var(--BackgroundQuaternary);
+    border-bottom: 2px solid var(--BackgroundQuaternary);
+    padding-left: 5px;
+}
+
+.asideRight a:hover {
+    background-color: var(--Background);
+    border-top: 2px solid var(--ColorHover);
+    border-bottom: 2px solid var(--ColorHover);
+}
+
 
 /* MAIN PAGE */
 
@@ -384,6 +423,7 @@ body {
     cursor: copy;
     color: var(--ColorHover);
 }
+
 /* FOOTER */
 
 
