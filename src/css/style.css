@@ -16,7 +16,7 @@ body {
     height: 100vh;
     overflow-y: scroll;
     background-color: var(--Background);
-    color: #000;
+    color: var(--FontColor);
 }
 
 /* TOGGLE THEME */
@@ -426,5 +426,29 @@ body {
 
 /* FOOTER */
 
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .asideLeft {
+        flex: 0;
+        border: none;
+    }
+
+    .asideRight {
+        flex: 0;
+        border: none;
+    }
+}
+
+@media screen and (min-width: 0) and (max-width: 375px) {
+    * {
+        font-size: 15px;
+    }
+
+    .menuContainer a {
+        font-size: 15px;
+    }
+}
+
+/* RESPONSIVE */
 
 /* 940 x 925 */
